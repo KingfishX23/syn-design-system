@@ -12,7 +12,7 @@ import rootReducers from "./rootReducers";
 import firebaseConfig from "./services/Firebase";
 import * as serviceWorker from './serviceWorker';
 
-console.warn = console.error = () => {};
+console.warn = console.error = () => { };
 
 const createStoreWithFirebase = compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),

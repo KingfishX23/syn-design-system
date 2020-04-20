@@ -25,21 +25,21 @@ const ButtonContainer = styled.div`
 `;
 
 const WorkInProgress = ({ history }) => {
-   return (
-      <Container>
-         <Image src={WIPArtwork} alt="" />
-         <h2>Sadly, we do not have this page yet</h2>
-         <ButtonContainer>
-            <Button
-               background="#3A3A50"
-               color="white"
-               onClick={() => history.push("/")}
-            >
-               Go to home page
-            </Button>
-         </ButtonContainer>
-      </Container >
-   );
+	return (
+		<Container>
+			<Image src={WIPArtwork} alt="" />
+			<h2>Sadly, we do not have this page yet</h2>
+			<ButtonContainer>
+				<Button
+					background="#3A3A50"
+					color="white"
+					onClick={() => history.push("/")}
+				>
+					Go to home page
+            	</Button>
+			</ButtonContainer>
+		</Container >
+	);
 };
 
 export default WorkInProgress;
