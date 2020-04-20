@@ -1,14 +1,14 @@
 import React from 'react';
 import { LeftJumbotron } from 'components/Landing/Jumbotron'
 import Button from 'components/Button'
-import { LandingMainArt } from '../../_links';
+import { LandingMainArt } from './_links';
 
 const LandingJumbotron = ({ isMobile }) => {
     console.log(isMobile)
     return (
         <LeftJumbotron
             minHeight={"80vh"}
-            background={"url(https://images.pexels.com/photos/3095041/pexels-photo-3095041.jpeg?cs=srgb&dl=roti-makanan-kue-camilan-3095041.jpg&fm=jpg)"}
+            background={`url(${LandingMainArt})`}
             color={"#fff"}
             headline={{
                 text: "World most famous cookies delivered to your doors",

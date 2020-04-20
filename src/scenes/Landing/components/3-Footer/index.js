@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiInstagram } from 'react-icons/fi'
 import { FaLine } from 'react-icons/fa'
-import { CerdasGroupLogo } from '../../_links'
+import { CerdasGroupLogo } from '../Features/_links'
 import styled from 'styled-components'
 
 const Container = styled.div`

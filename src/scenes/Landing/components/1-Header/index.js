@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { Header, HeaderRowMenu } from 'components/Headers';
+import { Header, HeaderRowMenu } from 'components/Landing/Headers';
 import { Drawer, DrawerList } from 'components/Drawers'
 import { CerdasGroupLogo } from './_links'
 

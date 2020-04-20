@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import ListsCard from './Cards'
-import { FeaturesArt1, BenefitsArt2, BenefitsArt3 } from '../../_links'
+import { FeaturesArt1, BenefitsArt2, BenefitsArt3 } from '../Features/_links'
 
 const Container = styled.div`
     margin: 4vh 0 0 0;

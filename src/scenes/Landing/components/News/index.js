@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { FiChevronDown } from 'react-icons/fi'
-import { FeaturesArt1 } from '../../_links';
+import { FeaturesArt1 } from '../Features/_links';
 
 const Container = styled.div`
     min-height: 400px;

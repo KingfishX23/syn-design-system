@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 //
-import LandingHeader from './components/Header'
-import LandingJumbotron from './components/Jumbotron'
-import LandingFooter from './components/Footer'
+import LandingHeader from './components/1-Header'
+import LandingJumbotron from './components/2-Jumbotron'
+import LandingFooter from './components/3-Footer'
 //
 import { connect } from 'react-redux'
-import LandingLists from './components/Lists'
-import LandingFeatures from './components/Features'
 
 const Container = styled.div`
     width: 100%;
