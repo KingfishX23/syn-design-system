@@ -1,0 +1,43 @@
+.ud-learn-footer {
+    &__container {
+        padding: 3vh 3vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #fff;
+    }
+
+    &__logo {
+        height: 3vh;
+        margin: 0vh 0 0 0;
+    } 
+    
+    &__social-media {
+        &-container {
+            margin: 0vh 0 0 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: #00000070;
+        }
+
+        &-items-container {
+            margin: .5vh 0vh .5vh 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-icons {
+            margin: 0vh 0vh 0 1vh;
+            font-size: 2.5vh;        
+        }
+    }
+
+    &__location-text {
+        margin: 0vh 0 0 0;
+        color: #555
+    }
+}

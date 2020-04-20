@@ -1,0 +1,107 @@
+.ud-surveys--signup {
+    &__container {
+        padding: 7vh 4vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__intro-image {
+        max-height: 55vw;
+    }
+
+    &__back-button {
+        padding: 2vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        background: white;
+        color: #0077ff;
+
+        &:active {
+            background: none
+        }
+    }
+
+    &__linear-progress {
+        &-container {
+            text-align: center;
+            color: #ffffffbb
+        }
+
+        &-itself {
+            width: 100%;
+            height: 1vh;
+            border-radius: 5vh;
+        }
+    }
+
+    &__hello {
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 60vh;
+        }
+
+        &-text {
+            margin: 2vh 0 2vh 0;
+            font: 700 4.2vh 'Open Sans';
+            letter-spacing: -.25vh;
+            line-height: 5vh;
+            color: #333;
+        } 
+    }
+
+    &__form-container {
+        width: 100%;
+        height: 47vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-radius: 1vh;
+    }
+
+    &__warning-container {
+        margin: 1vh 3vh;
+        padding: 1vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        background: #233a77;
+    }
+
+    &__buttons-container {
+        position: absolute;
+        bottom: 7vh;
+        left: 0;
+        width: 100%;
+        padding: 4vh;
+
+    }
+
+    &__continue-button {
+        width: 100%;
+        padding: 1.75vh 2vh 1.75vh 2vh;
+        height: 7vh;
+        color: #fff;
+        background-color: #E52626;
+        
+        &:active {
+            background-color: #b61f1f;
+        }
+    }
+
+    &__finish-button {
+        width: 100%;
+        padding: 1.75vh 2vh 1.75vh 2vh;
+        height: 7vh;
+        color: #fff;
+        background-color: #3377FF;
+        
+        &:active{
+            background-color: #213660;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.ud-learn--header {
+    &__container {
+        width: 100vw;
+        height: 8vh;
+        padding: 3vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        z-index: 1000;
+        background:#fcfcfc;
+        transition: all 300ms ease-in;
+    }
+
+    &__logo {
+        height: 3vh;
+    }
+
+    &__login {
+        margin: 0 0 0 0;
+        position: absolute;
+        right: 3vh;
+        color: #333;
+
+        &:active {
+            color: #2867b9
+        }
+    }
+}

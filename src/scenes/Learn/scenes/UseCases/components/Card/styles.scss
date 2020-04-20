@@ -1,0 +1,39 @@
+.ud-learn-usecases {
+    &__card {
+        &-container {
+            padding: 4vh 3vh;
+            min-height: 60vh;
+            background: #fcfcfc;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-image {
+            margin: 4vh 0 0 0;
+            width: 65%;
+            box-shadow: 0 6px 12px #00000026;
+        }
+
+        &-problem {
+            &-title {
+                margin: 4vh 0 1.5vh 0;
+            }
+
+            &-description {
+                line-height: 3.5vh;
+            }
+        }
+
+        &-solution {
+            &-title {
+                margin: 4vh 0 1.5vh 0;
+            }
+            
+            &-description {
+                margin: 4vh 0 1.5vh 0;
+                line-height: 3.5vh;
+            }
+        }
+    }
+}

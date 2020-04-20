@@ -1,0 +1,35 @@
+.ud-learn-appbar {
+    &__appbar {
+        box-shadow: none /* 0 4px 4px -3px #00000030*/ !important;
+        margin: 0 0 0 0;
+        //border-bottom: 1px solid #eee !important;
+    }
+
+    &__global-container {
+        
+
+        transition: all .3s ease;
+        //background: #0F4071;//linear-gradient(60deg, #1C6AAF, #0F4071);
+        padding: 0 0 0vh 0;
+    }
+
+    &__container {
+        padding: 4vh 3vh 2vh 3vh;
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        width: 100%;
+        z-index: 1000;
+        color: #fff;
+    }
+
+    &__subtitle {
+        margin: 0 0 .5vh 0;
+    }
+
+    &__title {
+        white-space: pre-line;
+        letter-spacing: 0;
+    }
+}
+

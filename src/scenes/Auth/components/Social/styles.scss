@@ -1,0 +1,23 @@
+.ud-auth--social {
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #ccc;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 1.75vh 0vh 1.75vh 0vh;
+        position: relative;
+        box-shadow: 0 5px 10px #00000010;
+        border-radius: 1vh;
+        color: #2369D2;
+        background-color: #fff;
+        
+        &:hover{
+            background-color: #b63636
+        }
+    }
+}

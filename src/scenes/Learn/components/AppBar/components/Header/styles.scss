@@ -1,0 +1,55 @@
+.tr-profileappbar--header{
+    &__container {
+       height: 6vh;
+       padding: 0 2vh;
+       display: flex;
+       align-items: center;
+       background: #198747;
+       color: #fff;
+    }
+
+    &__back-container {
+        //padding: .5vh 1.5vh .5vh 1vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 75vh;
+        //background: #ffffff40;
+    }
+
+    &__chevron {
+        margin: 0 .5vh 0 0;
+    }
+
+    &__tier {
+        &-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-label{
+            background: #ffffff60;
+            color: #333;
+            height: 3vh;
+            padding: 0 .75vh 0 .75vh;
+            border-radius: .75vh 0 0 .75vh;
+            letter-spacing: .5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-itself {
+            background: #555;
+            color: #fff;
+            height: 3vh;
+            padding: 0 1vh 0 1vh;
+            border-radius: 0 .75vh .75vh 0;
+            letter-spacing: .5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.tr-surveys--input {
+    &__container {
+        width: 100%;
+        margin: 0 0 1vh 0;
+        padding: 0 0vh 1vh 0vh;
+        border-radius: 1vh;
+        background: white;
+    }
+
+    &__label {
+        margin: 0vh 0vh 0vh 0vh;
+        padding: 1vh 0vh 0vh 0vh;
+        color: #000000e0;
+    }
+
+    &__input {
+        &-itself {
+            width: 100%;
+            height: 7vh;
+            display: flex;
+            justify-content: center;
+            border: none;
+            border-bottom: 1px solid #00000050;
+            color: #000000e0;
+            background: transparent;
+            
+            &::placeholder {
+                color: #00000050
+            }
+
+            &:hover {
+                border-bottom: 2px solid #ff7f5f;
+            }
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        &-front-icon {
+            margin: 0 1.5vh 0 0;
+        }
+    }
+}

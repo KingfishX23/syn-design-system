@@ -1,0 +1,28 @@
+.tr-planners--surveys--datepicker {
+    &__container {
+        width: 100%;
+        padding: 1vh 0vh 1vh 0vh;
+        border-radius: 1vh;
+        background: white;
+    }
+
+    &__label {
+        margin: 0 0 .5vh 0;
+    }
+
+    &__input {
+        width: 100%;
+        height: 5.5vh;
+        padding: 1vh;
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: none;
+        border: 1px solid lightgray;
+        border-radius: 1vh;
+        background: white;
+
+        &::placeholder {
+            color: #ccc
+        }
+    }
+}
