@@ -15,6 +15,7 @@ const LandingJumbotron = ({ isMobile }) => {
 			minHeight={"80vh"}
 			background={`url(${LandingMainArt})`}
 			color={"#333"}
+			align="left"
 		>
 			<JumbotronMain
 				preface="EAT FROM HOME"
@@ -28,10 +29,10 @@ const LandingJumbotron = ({ isMobile }) => {
 						disableElevation
 						background="yellow"
 						color="#333"
-						fullWidth
+						//fullWidth
 						style={{
 							font: "900 1em 'Lato'",
-							padding: "15px 0",
+							padding: "15px none",
 						}}
 					>
 						LEARN MORE
@@ -40,11 +41,11 @@ const LandingJumbotron = ({ isMobile }) => {
 						disableElevation
 						background="white"
 						color="#333"
-						fullWidth
+						//fullWidth
 						style={{
 							marginTop: "1vh",
 							font: "900 1em 'Lato'",
-							padding: "15px 0",
+							padding: "15px none",
 						}}
 					>
 						CONTACT US

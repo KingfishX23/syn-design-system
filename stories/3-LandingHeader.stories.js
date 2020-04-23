@@ -31,7 +31,7 @@ const contents = [
     { type: "divider" }
 ]
 
-export const White = () => (
+export const WhiteHeader = () => (
     <Header
         logoURL={CerdasLogo}
         background={text("Background", "#fff")}
@@ -101,4 +101,4 @@ class Filled extends Component {
     }
 }
 
-export const WithMenu = () => <Filled />
+export const HeaderWithMenu = () => <Filled />

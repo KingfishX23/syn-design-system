@@ -11,6 +11,7 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: ${(props) => (props.isMobile ? "column" : "row")};
 	align-items: ${(props) => !props.isMobile && "center"};
+	justify-content: ${(props) => props.align};
 `;
 
 class LeftJumbotron extends Component {
@@ -26,13 +27,14 @@ class LeftJumbotron extends Component {
 	}
 
 	render() {
-		const { children, minHeight, background, color } = this.props;
+		const { children, minHeight, background, color, align } = this.props;
 		return (
 			<Container
 				minHeight={minHeight}
 				background={background}
 				color={color}
 				isMobile={this.state.isMobile}
+				align={align}
 			>
 				{children}
 			</Container>

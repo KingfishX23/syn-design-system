@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeadingsContainer = styled.div`
 	width: 100%;
-	max-width: ${(props) => props.maxWidth};
+	max-width: ${(props) => props.maxWidth}px;
 	display: flex;
 	flex-direction: column;
 	align-items: ${(props) => props.align};
@@ -24,6 +24,7 @@ const Headline = styled.h1`
 
 const SubHeading = styled.h4`
 	margin: 8px 0;
+	max-width: ${(props) => props.maxWidth - 100}px;
 	line-height: 1.5 !important;
 	font: 400 1.2em 'Lato';
 `;
@@ -33,7 +34,7 @@ const JumbotronMain = ({ children, maxWidth, align, preface, headline, subheadin
 		<HeadingsContainer align={align} maxWidth={maxWidth}>
 			<Preface>{preface}</Preface>
 			<Headline>{headline}</Headline>
-			<SubHeading>{subheading}</SubHeading>
+			<SubHeading maxWidth={maxWidth}>{subheading}</SubHeading>
 			{children}
 		</HeadingsContainer>
 	);
