@@ -1,38 +1,58 @@
-import React from 'react';
-import { LeftJumbotron } from 'components/Landing/Jumbotron'
-import Button from 'components/Button'
-import { LandingMainArt } from './_links';
+import React from "react";
+import styled from "styled-components";
+import { JumbotronContainer, JumbotronMain } from "components/Landing/Jumbotron";
+import Button from "components/Button";
+import { LandingMainArt } from "./_links";
+
+const ButtonsContainer = styled.div`
+	margin: 15px 0 0 0;
+`;
 
 const LandingJumbotron = ({ isMobile }) => {
-    console.log(isMobile)
-    return (
-        <LeftJumbotron
-            minHeight={"80vh"}
-            background={`url(${LandingMainArt})`}
-            color={"#fff"}
-            headline={{
-                text: "World most famous cookies delivered to your doors",
-                weight: '900',
-                family: 'Lato',
-                size: '2.25em'
-            }}
-            subheading={{
-                text: "Customize cookie types, then we deliver cookies right to your door",
-                weight: '400',
-                family: 'Lato',
-                size: '1.25em'
-            }}
-            primaryCTA={
-                <Button
-                    background="yellow"
-                    color="#333"
-                    style={{ margin: "30px 0 0 0", font: '700 1.2em Lato' }}
-                >
-                    Check Our Shop
-                </Button>
-            }
-        />
-    );
+	console.log(isMobile);
+	return (
+		<JumbotronContainer
+			minHeight={"80vh"}
+			background={`url(${LandingMainArt})`}
+			color={"#333"}
+		>
+			<JumbotronMain
+				preface="EAT FROM HOME"
+				headline="World most famous cookies delivered to your doors"
+				subheading="Customize cookie types, then we deliver cookies right to your door"
+				align="left"
+				maxWidth="400px"
+			>
+				<ButtonsContainer>
+					<Button
+						disableElevation
+						background="yellow"
+						color="#333"
+						fullWidth
+						style={{
+							font: "900 1em 'Lato'",
+							padding: "15px 0",
+						}}
+					>
+						LEARN MORE
+					</Button>
+					<Button
+						disableElevation
+						background="white"
+						color="#333"
+						fullWidth
+						style={{
+							marginTop: "1vh",
+							font: "900 1em 'Lato'",
+							padding: "15px 0",
+						}}
+					>
+						CONTACT US
+					</Button>
+				</ButtonsContainer>
+			</JumbotronMain>
+		</JumbotronContainer>
+	);
 };
 
 export default LandingJumbotron;

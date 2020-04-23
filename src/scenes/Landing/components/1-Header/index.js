@@ -1,27 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { Header, HeaderRowMenu } from 'components/Landing/Headers';
+import { Header, HeaderRowMenu } from 'components/Landing/Header';
 import { Drawer, DrawerList } from 'components/Drawers'
-import { CerdasGroupLogo } from './_links'
-
-const contents = [
-    { type: "single", level: 0, title: "Home", linkTo: "/", logo: null },
-    {
-        type: "multiple", level: 0, title: "Products", logo: null, contents: [
-            {
-                type: "multiple", level: 1, title: "UX Design", logo: null, contents: [
-                    { type: "single", level: 2, title: "You know Ill Go Get", linkTo: "/ux/GoGet", logo: null }
-                ]
-            },
-            {
-                type: "multiple", level: 1, title: "Music producers", logo: null, contents: [
-                    { type: "single", level: 2, title: "DJ rizki", linkTo: "/music/DJRizki", logo: null }
-                ]
-            },
-        ]
-    },
-    { type: "divider" }
-]
+import { CerdasGroupLogo, MenuContents } from './_resource'
 
 class LandingHeader extends Component {
     state = { isMobile: false, isDrawerOpen: false }
@@ -49,7 +30,7 @@ class LandingHeader extends Component {
                 onClose={() => this.setState({ isDrawerOpen: false })}
             >
                 <DrawerList
-                    contents={contents}
+                    contents={MenuContents}
                     history={history}
                     font="Lato"
                 />
@@ -61,7 +42,7 @@ class LandingHeader extends Component {
         const { history } = this.props
         return (
             <HeaderRowMenu
-                contents={contents}
+                contents={MenuContents}
                 history={history}
                 font="Lato"
             />

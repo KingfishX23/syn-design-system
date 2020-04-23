@@ -4,7 +4,7 @@ import styled from 'styled-components'
 //
 import LandingHeader from './components/1-Header'
 import LandingJumbotron from './components/2-Jumbotron'
-import LandingFooter from './components/3-Footer'
+import LandingFooter from './components/5-Footer'
 //
 import { connect } from 'react-redux'
 

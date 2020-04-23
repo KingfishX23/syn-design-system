@@ -1,4 +1,4 @@
-import CenterJumbotron from './Center'
-import LeftJumbotron from './Left'
+import JumbotronMain from './JumbotronMain'
+import JumbotronContainer from './JumbotronContainer'
 
-export { CenterJumbotron, LeftJumbotron }
+export { JumbotronMain, JumbotronContainer }
