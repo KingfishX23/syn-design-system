@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { FaLine, FaInstagram, FaYoutube } from "react-icons/fa";
 
@@ -21,17 +21,19 @@ const ContentsContainer = styled.div`
 	width: 100%;
 	padding: 0 0 2vh 0;
 	display: flex;
-	flex-direction: row;
+	flex-direction: ${props => props.isMobile ? "column" : "row"};
 `;
 
 const LogoSocMedContainer = styled.div`
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 `;
 
 const Logo = styled.img`
-	height: 65px;
-	margin: 0vh 3vh 0 0;
+	height: 75px;
+	margin: 0vh 3vh 2vh 0;
 `;
 
 const SocMedContainer = styled.div`
@@ -46,7 +48,7 @@ const SocMedContainer = styled.div`
 const ChildrenContainer = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: ${props => props.isMobile ? "flex-start" : "flex-end"};
 `;
 
 const CopyrightText = styled.h4`
@@ -62,27 +64,65 @@ const LegalContainer = styled.div`
 	border-top: 1px solid #ffffff30;
 `;
 
-const LandingFooter = ({ children, logoURL, background, color, IGLink, YoutubeLink, LineLink }) => {
-	return (
-		<Container background={background} color={color}>
-			<MaxWidthContainer>
-				<ContentsContainer>
-					<LogoSocMedContainer>
-						<Logo src={logoURL} alt="" />
-						<SocMedContainer>
-							<FaInstagram style={{margin: "0 3vh 0 0"}} onClick={()=>{window.location.replace(IGLink)}}/>
-							<FaYoutube style={{margin: "0 3vh 0 0"}} onClick={()=>{window.location.replace(YoutubeLink)}}/>
-							<FaLine onClick={()=>{window.location.replace(LineLink)}}/>
-						</SocMedContainer>
-					</LogoSocMedContainer>
-					<ChildrenContainer>{children}</ChildrenContainer>
-				</ContentsContainer>
-				<LegalContainer>
-					<CopyrightText>2020. All rights reserved</CopyrightText>
-				</LegalContainer>
-			</MaxWidthContainer>
-		</Container>
-	);
-};
+class LandingFooterContainer extends Component {
 
-export default LandingFooter;
+	state = { isMobile: false }
+
+	componentDidMount() {
+		window.addEventListener("resize", this.resize.bind(this));
+		this.resize();
+	}
+
+	resize() {
+		this.setState({ isMobile: window.innerWidth < window.innerHeight });
+	}
+
+	render() {
+		const { isMobile } = this.state
+		const {
+			children,
+			logoURL,
+			background,
+			color,
+			IGLink,
+			YoutubeLink,
+			LineLink,
+		} = this.props;
+		return (
+			<Container background={background} color={color}>
+				<MaxWidthContainer>
+					<ContentsContainer isMobile={isMobile}>
+						<LogoSocMedContainer>
+							<Logo src={logoURL} alt="" />
+							<SocMedContainer>
+								<FaInstagram
+									style={{ margin: "0 3vh 0 0" }}
+									onClick={() => {
+										window.location.replace(IGLink);
+									}}
+								/>
+								<FaYoutube
+									style={{ margin: "0 3vh 0 0" }}
+									onClick={() => {
+										window.location.replace(YoutubeLink);
+									}}
+								/>
+								<FaLine
+									onClick={() => {
+										window.location.replace(LineLink);
+									}}
+								/>
+							</SocMedContainer>
+						</LogoSocMedContainer>
+						<ChildrenContainer isMobile={isMobile}>{children}</ChildrenContainer>
+					</ContentsContainer>
+					<LegalContainer>
+						<CopyrightText>2020. All rights reserved</CopyrightText>
+					</LegalContainer>
+				</MaxWidthContainer>
+			</Container>
+		);
+	}
+}
+
+export default LandingFooterContainer;

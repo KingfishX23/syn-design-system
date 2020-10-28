@@ -9,6 +9,7 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 
 const CustomList = styled(List)`
 	&& {
+        min-width: 125px;
         width: 20vw;
         max-width: 180px;
 	}
